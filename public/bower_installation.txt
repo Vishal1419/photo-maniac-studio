@@ -1,0 +1,9 @@
+bootstrap
+angular#1.5.8
+angular-route
+angular-animate
+angular-bootstrap#0.10.0
+angular-messages
+angular-flash-alert //For displaying flash messages even after navigation.
+angular-auto-validate //For validating forms.
+angular-bootstrap-lightbox //For displaying images with previous and next in bootstrap-modal

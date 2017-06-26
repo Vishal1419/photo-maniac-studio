@@ -1,0 +1,40 @@
+<div ng-controller="homeController" class="home">
+
+    <div class="row">
+
+        <div class="col-md-4 col-md-offset-1">
+            <img src="images/company-logo.png" alt=""  class="company-logo"/>
+        </div>
+
+        <br class="visible-xs visible-sm"/>
+        <br class="visible-xs visible-sm"/>
+        <br class="visible-xs visible-sm"/>
+        <br class="visible-xs visible-sm"/>
+
+        <div class="col-md-5 col-md-offset-1">
+
+            <div class="carousel-holder">
+
+                <div uib-carousel carousel-controls active="0" interval="3000" no-wrap="false">
+                    <div uib-slide class="my-slide" ng-repeat="photo in photos track by $index" index="$index">
+                        <img ng-src="{{photo.url}}" class="img-responsive" />
+                    </div>
+                </div>
+
+                <l-border ng-click="goPrev()"></l-border>
+                <r-border ng-click="goNext()"></r-border>
+
+            </div>
+
+            <br />
+            <br />
+
+            <div ng-show="currentUser">
+                <a href="/home/slideshow/edit" class="btn btn-primary pull-right btn-bg">Edit Slideshow Images</a>
+            </div>
+
+        </div>
+
+    </div>
+    
+</div>

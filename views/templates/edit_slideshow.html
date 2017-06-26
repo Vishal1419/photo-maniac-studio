@@ -1,0 +1,28 @@
+<div ng-controller="homeController">
+
+    <h1>Images that will be shown in slideshow:</h1>
+
+    <div class="image-wrapper">
+
+        <div ng-repeat="photo in photos" class="image-holder">
+            <img ng-src="{{photo.url}}" />
+            <img src="images/delete-image.png" class="close" ng-click="removeImage(photo)" />            
+        </div>
+
+    </div>
+
+    <br />
+    <br />
+
+    <form>
+
+        <div class="form-group">
+            <label for="slideshow-photo-uploader" class="control-label">Add Images to slideshow</label>
+            <input type="file" id="slideshow-photo-uploader" name="slideshow-photo-uploader" 
+                multiple="multiple" accept="image/*" class="form-control form-input"
+                attachment-File="slideshow.images" onchange="angular.element(this).scope().addImages(event)" />
+        </div>
+        
+    </form>
+
+</div>

@@ -1,0 +1,30 @@
+.login {
+    /*background-color: #d3d3d3;*/
+ 	font-family: 'Oxygen', sans-serif;
+    margin-top: 70px;
+}
+
+.login-button {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.logout-parent {
+    position: relative;
+    display: block;
+}
+
+.logout {
+    position: absolute;
+    /*top: 60px;*/
+    right: 0px;
+}
+
+#PasswordForm {
+    position: relative;
+    margin-top: 40px;
+}
+
+/*.admin-background-image {
+    width: 70%;
+}*/

@@ -1,0 +1,97 @@
+<div class="login" ng-controller="userController">
+
+    <!--<div class="col-md-5 col-md-offset-1">
+        <img src="images/admin.png" class="admin-background-image" />
+    </div>-->
+
+    <div class="col-md-4 col-md-offset-4" ng-show="currentUser">
+
+        <div class="col-md-8 col-md-offset-2">
+
+            <div class="logout-parent">
+
+                <input type="button" class="btn btn-primary logout" ng-show="currentUser" ng-click="logout()" value="Logout" />
+
+            </div>
+
+            <form id="PasswordForm" name="changePassword" ng-submit="changePass(passwords)" novalidate>
+                <div class="form-group">
+                    <label for="oldPassword" class="control-label">Old Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="password" id="oldPassword" name="oldPassword" class="form-control form-input" ng-model="passwords.oldPassword"
+                                autocomplete="off"
+                                required 
+                                ng-required-err-type="requiredOldPassword" />
+                    </div>
+                </div>            
+                <div class="form-group">
+                    <label for="newPassword" class="control-label">New Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="password" id="newPassword" name="newPassword" class="form-control form-input" ng-model="passwords.newPassword"
+                                autocomplete="off"
+                                required
+                                ng-required-err-type="requiredNewPassword" />
+                    </div>
+                </div>            
+                <div class="form-group">
+                    <label for="newConfirmPassword" class="control-label">Confirm New Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="password" id="newConfirmPassword" name="newConfirmPassword" class="form-control form-input" ng-model="passwords.newConfirmPassword"
+                                autocomplete="off"
+                                required match-to="{ matchString: passwords.newPassword, unequal: false}"
+                                ng-required-err-type="requiredConfirmPassword" 
+                                ng-matchTo-err-type="matchNotFound"/>
+                    </div>
+                </div>            
+                <div class="row">
+                    <div class="form-group form-controls">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Change Password</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4 col-md-offset-4" ng-hide="currentUser">
+
+        <div class="col-md-8 col-md-offset-2">
+
+            <div class="row">
+                <form name="loginForm" ng-submit="login(user)" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="control-label">Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" id="name" name="name" class="form-control form-input" ng-model="user.username"
+                                    autocomplete="off"
+                                    required 
+                                    ng-required-err-type="requiredName" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" id="password" name="password" class="form-control form-input" ng-model="user.password"
+                                    autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-controls">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

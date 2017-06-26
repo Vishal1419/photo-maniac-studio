@@ -1,0 +1,204 @@
+.contact-details {
+    font-size: 10px;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+}
+
+.contact-logo img {
+    height: 32px;
+    width: 32px;
+}
+
+.contact-text {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.contact-text a {
+    color: #ddd;
+}
+
+.message-wrapper {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 4%;
+    margin-bottom: 20px;
+}
+
+.message-wrapper blockquote p:first-child {
+    margin-bottom: 0;
+}
+
+.delete-blockquote {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 100;
+}
+
+.delete-blockquote:hover {
+    opacity: 1;
+}
+
+.contact-details {
+    padding: 5% 0;
+}
+
+.t-wrapper {
+    padding: 150px 0;
+}
+
+.t div{
+    position:absolute;
+    top:0; left:0;
+    
+    transform-origin:0 0;
+    -ms-transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+    
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+}
+
+.t .wrap{
+    top:50%; left:50%;
+
+    -ms-transform: skewX(30deg);
+    -webkit-transform: skewX(30deg);
+    transform: skewX(30deg);
+    border: 1px solid #222;
+}
+
+.t .wrap .triangle {
+    position:relative;
+    width: 150px;
+    height: 130px;
+    background-color: #0079c5;
+    cursor:pointer;
+    z-index:1;
+}
+
+.t .wrap .triangle a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.t .wrap .triangle img {
+    width: 48px;
+    height: 48px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.t .wrap:nth-child(1) .triangle img {
+    transform: rotate(45deg) skewX(15deg) skewY(-38deg) scaleX(1.0) scaleY(1.2);
+}
+
+.t .wrap:nth-child(2) .triangle img {
+    transform: rotate(-45deg) skewX(4deg) skewY(4deg) scaleX(1.0) scaleY(0.7);
+}
+
+.t .wrap:nth-child(3) .triangle img {
+    transform: rotate(-105deg) skewX(8deg) skewY(16deg) scaleX(0.9) scaleY(1.3);
+}
+
+.t .wrap:nth-child(4) .triangle img {
+    transform: rotate(-286deg) skewX(8deg) skewY(16deg) scaleX(0.8) scaleY(1.1);
+}
+
+.t .wrap:nth-child(5) .triangle img {
+    transform: rotate(-235deg) skewX(-6deg) skewY(14deg) scaleX(1.2) scaleY(0.7);
+}
+
+.t .wrap:nth-child(6) .triangle img {
+    transform: rotate(-194deg) skewX(-44deg) skewY(12deg) scaleX(1.2) scaleY(1.0);
+    /*background: red;    */
+}
+
+
+/*.t .wrap:nth-child(2) .triangle img {
+    transform: rotate(-40deg) skewX(10deg);
+}
+
+.t .wrap:nth-child(3) .triangle img {
+    transform: rotate(-40deg) skewX(40deg);
+}*/
+
+.t .wrap .mask{
+    width:100%;
+    height:115.5%;
+    background-color: #222;
+    left:100%;
+    z-index:2;
+    
+    -ms-transform: skewX(-30deg) rotate(30deg);
+    -webkit-transform: skewX(-30deg) rotate(30deg);
+    transform: skewX(-30deg) rotate(30deg);
+} 
+
+.t .wrap .triangle:hover{
+    background-color: #009cff;
+    
+    transform:  translate(10%, 10%);
+    -webkit-transform: translate(10%, 10%);
+    -moz-transform: translate(10%, 10%);
+}
+
+.t .triangle:hover + .mask{
+    -ms-transform: skewX(-30deg) rotate(30deg) translate(17.5%, 0);
+    -webkit-transform: skewX(-30deg) rotate(30deg) translate(17.5%, 0);
+    transform: skewX(-30deg) rotate(30deg) translate(17.5%, 0);
+}
+
+.t > div:nth-child(2){
+    -ms-transform: rotate(60deg) skewX(30deg);
+    -webkit-transform: rotate(60deg) skewX(30deg);
+    transform: rotate(60deg) skewX(30deg);
+}
+
+.t > div:nth-child(3){
+    -ms-transform: rotate(120deg) skewX(30deg);
+    -webkit-transform: rotate(120deg) skewX(30deg);
+    transform: rotate(120deg) skewX(30deg);
+}
+
+.t > div:nth-child(4){
+    -ms-transform: rotate(-60deg) skewX(30deg);
+    -webkit-transform: rotate(-60deg) skewX(30deg);
+    transform: rotate(-60deg) skewX(30deg);
+}
+.t > div:nth-child(5){
+    -ms-transform: rotate(-120deg) skewX(30deg);
+    -webkit-transform: rotate(-120deg) skewX(30deg);
+    transform: rotate(-120deg) skewX(30deg);
+}
+.t > div:nth-child(6){
+    -ms-transform: rotate(-180deg) skewX(30deg);
+    -webkit-transform: rotate(-180deg) skewX(30deg);
+    transform: rotate(-180deg) skewX(30deg);
+}
+
+p.hidden {
+    display: none;
+}
+
+.t-wrapper + div p.detail {
+    position: absolute;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 22px;
+    z-index: 500;
+}
+
+.btn-send {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+}

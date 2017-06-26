@@ -1,0 +1,114 @@
+<div ng-controller="galleryController">
+    
+    <div class="row top-row container-fluid">
+
+        <div class="scroll-left col-md-1">
+            <div class="triangle-control triangle-left"><a href="#"></a></div>
+        </div>
+
+        <div class="scrollable-container-parent col-md-10">
+
+            <div class="scrollable-container">
+
+                <table>
+                    <tbody>
+                        <tr>
+
+                            <td ng-repeat="category in categories">
+
+                                <div class="item-wrapper" ng-click="setSelectedCategory(category, $index)">
+
+                                    <input type="radio" name="fakeradio" value="$index" ng-checked="fakeRadioStatus==$index" />
+
+                                    <div>
+
+                                        <div class="col-md-12 menu-top-wrapper">
+                                            <img ng-src="{{::category.photos[0].url}}" class="menu-top-img" />
+                                        </div>
+                                        <div class="col-md-6 menu-left-wrapper">
+                                            <img ng-src="{{::category.photos[1].url}}" class="menu-left-img" />            
+                                        </div>
+                                        <div class="col-md-6  menu-right-wrapper">
+                                            <img ng-src="{{::category.photos[2].url}}" class="menu-right-img" />          
+                                        </div>
+                                        <p class="col-md-12 menu-headline badge">{{category.label}}</p>
+                                        <!--<p class="col-md-12 menu-no-of-items badge">{{category.photos.length}} PHOTOS</p>-->
+                                        
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--<div class="row-fluid" ng-repeat="category in categories">
+                    
+                    <div class="col-md-3 item-wrapper" ng-click="setSelectedCategory(category, $index)">
+
+                        <input type="radio" name="fakeradio" value="$index" ng-checked="fakeRadioStatus==$index" />
+
+                        <div>
+
+                            <div class="col-md-12 menu-top-wrapper">
+                                <img ng-src="{{::category.photos[0].url}}" class="menu-top-img" />
+                            </div>
+                            <div class="col-md-6 menu-left-wrapper">
+                                <img ng-src="{{::category.photos[1].url}}" class="menu-left-img" />            
+                            </div>
+                            <div class="col-md-6  menu-right-wrapper">
+                                <img ng-src="{{::category.photos[2].url}}" class="menu-right-img" />          
+                            </div>
+                            <p class="col-md-12 menu-headline badge">{{category.label}}</p>
+                            <p class="col-md-12 menu-no-of-items badge">{{category.photos.length}} PHOTOS</p>
+                            
+                        </div>
+
+                    </div>
+
+                </div>-->
+
+            </div>
+
+        </div>
+
+        <div class="scroll-right col-md-1">
+            <div class="triangle-control triangle-right"><a href="#"></a></div>            
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="image-wrapper">
+            <div class="image-holder" ng-repeat="photo in selectedCategory.photos">
+                <img ng-src="{{photo.url}}" data-toggle="modal" data-target=".modalImage"
+                        ng-click="setSelectedImage(photo, $index)"/>
+                <img src="images/delete-image.png" class="close" ng-click="removeImage(photo)" ng-show="currentUser" />                                
+            </div>
+
+        </div>
+
+    </div>
+
+    <br />
+    <br />
+
+    <div ng-show="currentUser">
+
+        <form>
+
+            <div class="form-group">
+                <label for="slideshow-photo-uploader" class="control-label">Add Images to {{selectedCategory.label}}</label>
+                <input type="file" id="slideshow-photo-uploader" name="slideshow-photo-uploader" 
+                    multiple="multiple" accept="image/*" class="form-control form-input"
+                    attachment-File="slideshow.images" onchange="angular.element(this).scope().addImages(event)" />
+            </div>
+            
+        </form>
+
+    </div>
+
+</div>

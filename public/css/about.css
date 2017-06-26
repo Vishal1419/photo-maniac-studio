@@ -1,0 +1,40 @@
+.about-title {
+    font-size: 38px;
+}
+
+.about-body {
+    font-size: 22px;
+    text-align: justify;
+}
+
+.about-photo img {
+    width: 100%;
+}
+
+.our-work-image {
+    list-style: none;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+ .our-work-image img{
+     height: 100px;
+ } 
+
+ @media(max-width:767px){
+     .about-title {
+         font-size: 24px;
+     }
+    .about-body {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;;
+        font-weight: 100;
+    }
+    .our-work-image img{
+        width: 100%;
+        height: auto;
+    }
+}

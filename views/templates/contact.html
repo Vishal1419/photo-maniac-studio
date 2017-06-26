@@ -1,0 +1,225 @@
+<div ng-controller="contactController">
+
+    <div class="col-md-4 col-md-offset-1 contact-details hidden-xs">
+
+        <div class="t-wrapper">
+
+            <div class="t">
+                <div class="wrap">
+                    <div class="triangle">
+                        <a href="#">
+                            <img ng-src="images/address.png" />
+                        </a>
+                        <p class="hidden content">PhotoManiac Studio, Rameshvar Complex, Opp. Jayavardhini Commercial, Sadhu vasvani Road, Rajkot - 360001</p>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <div class="wrap">
+                    <div class="triangle">
+                        <a href="tel:+918511917777">
+                            <img ng-src="images/call.png" />
+                        </a>
+                        <p class="hidden content">+91 851191 7777</p>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <div class="wrap">
+                    <div class="triangle">
+                        <a href="https://api.whatsapp.com/send?phone=+918511917777">
+                            <img ng-src="images/whatsapp.png" />
+                        </a>
+                        <p class="hidden content">+91 851191 7777</p>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <div class="wrap">
+                    <div class="triangle">
+                        <a href="https://www.facebook.com/Photomaniac-Studio-1888731094738020/">
+                            <img ng-src="images/facebook.png" />                        
+                        </a>
+                        <p class="hidden content">Photomaniac Studio</p>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <div class="wrap">
+                    <div class="triangle">
+                        <a href="https://www.instagram.com/photomaniac_studio/">                    
+                            <img ng-src="images/instagram.png" />
+                        </a>
+                        <p class="hidden content">Photomaniac_Studio</p>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <div class="wrap">
+                    <div class="triangle">
+                        <a href="mailto:photomaniacstudio7@gmail.com">
+                            <img ng-src="images/mail.png" />
+                        </a>
+                        <p class="hidden content">photomaniacstudio7@gmail.com</p>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+            </div>
+
+            <br />
+            <br />
+
+        </div>
+
+        <div class="detail-parent">
+            <p class="detail"></p>
+        </div>
+
+
+    </div>
+
+    <br class="visible-sm"/>
+    <br class="visible-sm"/>
+    <br class="visible-sm"/>
+    <br class="visible-sm"/>
+    <br class="visible-sm"/>
+
+        <!--<div class="row contact-item">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-2 contact-logo">
+                    <img ng-src="images/user.png" />
+                </div>
+                <div class="col-md-9 contact-text">
+                    <a href="">Bhumik Ramani</a>
+                </div>
+            </div>
+        </div>
+        <div class="row contact-item">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-2 contact-logo">
+                    <img ng-src="images/call.png" />
+                </div>
+                <div class="col-md-9 contact-text">
+                    <a href="tel:+918511917777">+91 85119 17777</a>
+                </div>
+            </div>
+        </div>
+        <div class="row contact-item">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-2 contact-logo">
+                    <img ng-src="images/WhatsApp.png" />
+                </div>
+                <div class="col-md-9 contact-text">
+                    <a href="https://api.whatsapp.com/send?phone=+918511917777">+91 85119 17777</a>
+                </div>
+            </div>
+        </div>
+        <div class="row contact-item">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-2 contact-logo">
+                    <img ng-src="images/mail.png" />
+                </div>
+                <div class="col-md-9 contact-text">
+                    <a href="mailto:photomaniacstudio7@gmail.com">photomaniacstudio7@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="row contact-item">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-2 contact-logo">
+                    <img ng-src="images/Facebook.png" />
+                </div>
+                <div class="col-md-9 contact-text">
+                    <a href="https://www.facebook.com/Photomaniac-Studio-1888731094738020/">PhotoManiac Studio</a>
+                </div>
+            </div>
+        </div>
+        <div class="row contact-item">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-2 contact-logo">
+                    <img ng-src="images/instagram.png" />
+                </div>
+                <div class="col-md-9 contact-text">
+                    <a href="https://www.instagram.com/photomaniac_studio/">PhotoManiac_Studio</a>
+                </div>
+            </div>
+        </div>
+        <div class="row contact-item">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-2 contact-logo">
+                    <img ng-src="images/address.png" />
+                </div>
+                <div class="col-md-9 contact-text">
+                    <a href="#">304, Rejency Towers, Tinwala farm, Opp. Baba Complex, Zanzarda Road, Junagadh - 362001</a>
+                </div>
+            </div>
+        </div>-->
+
+    <div class="col-md-4 col-md-offset-1" ng-hide="currentUser">
+        <div>
+            <div class="row">
+                <form id="messageForm" name="messageForm" ng-submit="submit(message)" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="control-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-control form-input" ng-model="message.name"
+                                autocomplete="off"
+                                required 
+                                ng-required-err-type="requiredName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="control-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control form-input" ng-model="message.email"
+                                autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label for="moblie" class="control-label">Mobile</label>
+                        <input type="text" id="mobile" name="mobile" class="form-control form-input" ng-model="message.mobile"
+                                autocomplete="off"
+                                required 
+                                ng-minlength="10"
+                                ng-pattern="/[0-9]+/"
+                                ng-required-err-type="requiredMobile"
+                                ng-minlength-err-type="minlengthMobile"
+                                ng-pattern-err-type="patternMobile" />
+                    </div>
+                    <div class="form-group">
+                        <label for="msg" class="control-label">Query</label>
+                        <textarea type="text" rows="12" id="msg" name="msg" class="form-control form-input" ng-model="message.msg_body"
+                                autocomplete="off"
+                                required 
+                                ng-required-err-type="requiredMessageBody">
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-controls pull-right">
+                            <button id="submit" type="submit" class="btn btn-success btn-input submit btn-send" ng-hide="isReadOnly">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5 col-md-offset-1" ng-show="currentUser">
+
+        <div ng-repeat="message in messages track by $index">
+
+            <div class="message-wrapper">
+                <blockquote>
+                    <p>{{message.email}}</p>
+                    <p>{{message.mobile}}</p>
+                    <p></p>
+                    <p>{{message.msg_body}}</p>
+                    <footer>
+                        <cite>{{message.name}}</cite>
+                    </footer>
+                </blockquote>            
+                <img src="images/delete-image.png" class="delete-blockquote close" ng-click="removeMessage(message)" />
+            </div>
+
+        </div>
+
+        <blockquote ng-show="!messages.length">
+            <footer>
+                <cite>No new messages</cite>
+            </footer>
+        </blockquote>            
+
+    </div>
+
+</div>

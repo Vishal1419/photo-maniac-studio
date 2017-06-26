@@ -1,0 +1,129 @@
+.home {
+    margin-top: 60px;
+}
+
+.company-logo {
+    /*resize logo to fit available space*/
+    width: 100%;
+}
+
+.carousel-holder {
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+@media(max-width:767px){
+    .carousel {
+        height: 200px;
+    }
+}
+
+@media(min-width:768px){
+}
+
+@media(min-width:992px){
+    .carousel {
+        -webkit-clip-path: polygon(2% 0, 70% 0, 100% 60% , 100% 100%, 25.2% 100%);
+        clip-path: polygon(2% 0, 70% 0, 100% 60% , 100% 100%, 25.2% 100%);
+    }
+}
+
+@media(min-width:1200px){
+    .carousel {
+        -webkit-clip-path: polygon(2% 0, 70% 0, 100% 60% , 100% 100%, 25.2% 100%);
+        clip-path: polygon(2% 0, 70% 0, 100% 60% , 100% 100%, 25.2% 100%);
+    }
+}
+
+.carousel img {
+    width:100%;
+    min-height: 350px;
+    height:350px;
+}
+
+.carousel a.left,
+.carousel a.right {
+    display: none;
+}
+
+l-border,
+r-border {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ED3237;
+  top: 0;
+  transition: background-color .1s cubic-bezier(.5, 0, .3, 1);
+}
+
+l-border:hover,
+r-border:hover {
+  background-color: #a90329;
+}
+
+l-border {
+  -webkit-clip-path: polygon(6.5% 20%, 21.7% 100%, 25.2% 100%);
+  clip-path: polygon(6.5% 20%, 21.7% 100%, 25.2% 100%);
+}
+
+r-border {
+  -webkit-clip-path: polygon(70% 0, 100% 60%, 73.5% 0);
+  clip-path: polygon(70% 0, 100% 60%, 73.5% 0);
+}
+
+/*Edit slideshow Image Page*/
+
+.image-wrapper
+{
+    position: relative;
+    /*width: 780px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 605px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.image-holder {
+    position: relative;
+    margin-top: 10px;
+    padding: 2px; /*for white border around images*/
+    height: 150px;
+}
+
+.image-holder img:first-child {
+    height: 100%;
+    margin:2px 0px;
+    box-shadow:#999 1px 1px 3px 1px; 
+}
+
+.image-holder img:nth-child(2) {
+    cursor: pointer;
+}
+
+.image-holder .close {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    z-index: 100;
+    color: red;
+    height: 30px;
+    width: 30px;
+    display: none;
+}
+
+img:hover + .close {
+    display: block;
+}
+
+.close:hover {
+    display: block;
+}

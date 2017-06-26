@@ -1,0 +1,27 @@
+{
+  "name": "photo-maniac-studio",
+  "version": "1.0.0",
+  "description": "A Photographer's website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "Vishal Sherathiya <vishalsherathiya@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "mongoose": "^4.10.6",
+    "morgan": "^1.8.2",
+    "multer": "^1.3.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.4.3"
+  }
+}
